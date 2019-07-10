@@ -89,7 +89,7 @@ $(function(){
 	})
 
 
-	timer = setInterval(autoplay,5000);
+	timer = setInterval(autoplay,2000);
 
 
 	$slide.mouseenter(function(){
@@ -98,7 +98,7 @@ $(function(){
 
 
 	$slide.mouseleave(function(){
-		timer = setInterval(autoplay,3000);
+		timer = setInterval(autoplay,2000);
 	});
 
 
