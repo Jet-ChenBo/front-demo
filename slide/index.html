@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/slide2.js"></script>
+	<style>
+			body{
+			font-family:'Microsoft Yahei';
+			font-size:12px;
+		}
+		
+		.slide{
+			width:760px;
+			height:270px;
+			background-color:gold;
+			position:relative;
+			overflow:hidden;
+			margin: 150px auto;
+		}
+		
+		
+		.slide_list{
+			position:absolute;
+			left:0;
+			top:0;
+			width:760px;
+			height:270px;
+			margin: 0;
+		}
+		
+		
+		
+		.slide_list li{
+			width:760px;
+			height:270px;
+			position:absolute;
+			left:0;
+			top:0;
+		}
+		
+		.prev{
+			position:absolute;
+			left:11px;
+			top:122px;
+			width:15px;
+			height:23px;
+			background:url(images/icons.png) -1px -450px no-repeat;
+			cursor:pointer;
+		}
+		
+		.next{
+			position:absolute;
+			right:11px;
+			top:122px;
+			width:15px;
+			height:23px;
+			background:url(images/icons.png) -1px -500px no-repeat;
+			cursor:pointer;
+		}
+		
+		
+		
+		.points{
+			position:absolute;
+			left:0;
+			bottom:9px;
+			width:100%;
+			height:11px;
+			font-size:0;
+			text-align:center;
+		}
+		
+		.points li{
+			display:inline-block;
+			width:11px;
+			height:11px;
+			background-color:#9f9f9f;
+			margin:0 5px;
+			border-radius:50%;
+			cursor:pointer;
+		}
+		
+		.points .active{
+			background-color:#cecece;
+		}
+		
+		</style>
+	<title>slide</title>
+</head>
+<body>
+		<div class="slide fl">			
+			<ul class="slide_list">
+				<li><a href=""><img src="images/slide.jpg" alt="专题图片" /></a></li>
+				<li><a href=""><img src="images/slide02.jpg" alt="专题图片" /></a></li>
+				<li><a href=""><img src="images/slide03.jpg" alt="专题图片" /></a></li>
+				<li><a href=""><img src="images/slide04.jpg" alt="专题图片" /></a></li>
+			</ul>
+
+			<div class="prev"></div>
+			<div class="next"></div>
+
+			<ul class="points">
+				
+			</ul>
+		</div>
+</body>
+</html>
