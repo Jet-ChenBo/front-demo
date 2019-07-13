@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>django运行截图</title>
+    <style>
+        b{
+            color: red;
+        }
+        h3{
+            text-align: center;
+        }
+        .title{
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+        }
+        .msg{
+            width: 100%;
+            height: 40px;
+            font: normal 15px/20px 'Microsoft Yahei';
+            text-indent: 30px;
+        }
+        .info{
+            margin: 20px auto;
+            width: 70%;
+            height: 70px;
+            background-color: lightgreen;
+        }
+
+        .pic{
+            margin: 20px auto;
+            width: 70%;
+            height: 550px; 
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="info">
+        <div class="title"><h3>注册</h3></div>
+        <div class="msg">用户信息放在 <b>自定义</b> 的用户表里</div>
+    </div>
+    <div class="pic" style="background:url(img/1.png) no-repeat;background-size:contain"></div>
+    <div class="info">
+        <div class="title"><h3>celery收到发送邮件的任务并且执行</h3></div>
+        <div class="msg"><b>celery</b> 用于异步任务处理，以 <b>redis</b> 作为中间人。还用于异步生成静态首页</div>
+    </div>
+    <div class="pic" style="background:url(img/2.png) no-repeat;background-size:contain;width: 60%"></div>
+    <div class="info">
+        <div class="title"><h3>到163邮箱完成账号激活</h3></div>
+        <div class="msg">利用 <b>163的SMTP</b> 服务器向用户发送邮件，点击链接激活并且跳转到登录页面</div>
+    </div>
+    <div class="pic" style="background:url(img/3.png) no-repeat;background-size:contain"></div>
+    <div class="info">
+        <div class="title"><h3>登录</h3></div>
+        <div class="msg">用户登陆时，会用 <b>login</b> 保存用户的登录状态，这是用户能访问用户信息页面的凭证，并且将用户的id保存在 <b>session</b> 中</div>
+    </div>
+    <div class="pic" style="background:url(img/4.png) no-repeat;background-size:contain"></div>
+    <div class="info">
+        <div class="title"><h3>首页上</h3></div>
+        <div class="msg">左边是一个商品分类，点击可跳转到响应种类。中间是一个轮播图</div>
+    </div>
+    <div class="pic" style="background:url(img/5.png) no-repeat;background-size:contain"></div>
+    <div class="info">
+        <div class="title"><h3>首页下</h3></div>
+        <div class="msg">后台可以添加商品，自定义展示顺序</div>
+    </div>
+    <div class="pic" style="background:url(img/6.png) no-repeat;background-size:contain"></div>
+    <div class="info">
+        <div class="title"><h3>商品详情</h3></div>
+        <div class="msg">包括商品的名称、简介、价格、购买数量(可调节)、新品推荐(按上架时间列出两个同类商品)、以及商品介绍和买家的评论</div>
+    </div>
+    <div class="pic" style="background:url(img/7.png) no-repeat;background-size:contain"></div>
+    <div class="info">
+        <div class="title"><h3>通过商品分类搜索商品</h3></div>
+        <div class="msg">通过左边的商品分类可以搜索到这一类的所有商品，<b>由于商品数量较少，所以设置了一页只显示一个商品</b></div>
+    </div>
+    <div class="pic" style="background:url(img/8.png) no-repeat;background-size:contain"></div>
+    <div class="info">
+        <div class="title"><h3>通过关键字搜索商品</h3></div>
+        <div class="msg">利用 <b>haystack</b> 搜索框架 和 <b>whoosh</b> 搜索引擎以及 <b>jieba</b> 中文分词根据商品的名称、简介以及详情进行搜索</div>
+    </div>
+    <div class="pic" style="background:url(img/9.png) no-repeat;background-size:contain"></div>
+    <div class="info">
+        <div class="title"><h3>用户中心-收货地址</h3></div>
+        <div class="msg">添加多条地址，在提交订单时可选择其中一条</div>
+    </div>
+    <div class="pic" style="background:url(img/10.png) no-repeat;background-size:contain"></div>
+    <div class="info">
+        <div class="title"><h3>用户中心-个人信息</h3></div>
+        <div class="msg">显示用户名、联系方式、收货地址以及 <b>最近浏览的商品(用redis的list类型存储用户历史浏览记录)</b></div>
+    </div>
+    <div class="pic" style="background:url(img/11.png) no-repeat;background-size:contain"></div>
+    <div class="info">
+        <div class="title"><h3>购物车</h3></div>
+        <div class="msg">用 <b>redis的hash类型存储用户的购物车信息</b>，可通过checkbox选择性对购物车中的商品进行付款购买</div>
+    </div>
+    <div class="pic" style="background:url(img/12.png) no-repeat;background-size:contain"></div>
+    <div class="info">
+        <div class="title"><h3>提交订单</h3></div>
+        <div class="msg">需要选择收货地址、支付方式进行订单的生成(在订单表里面生成一条订单信息)</div>
+    </div>
+    <div class="pic" style="background:url(img/13.png) no-repeat;background-size:contain"></div>
+    <div class="info">
+        <div class="title"><h3>用户中心-订单信息</h3></div>
+        <div class="msg">提交订单后跳转到用户信息的订单界面，会显示当前 <b>订单的状态</b></div>
+    </div>
+    <div class="pic" style="background:url(img/14.png) no-repeat;background-size:contain"></div>
+    <div class="info">
+        <div class="title"><h3>调用支付宝接口支付</h3></div>
+        <div class="msg">我用的支付宝的沙盒，调用支付接口进行付款</div>
+    </div>
+    <div class="pic" style="background:url(img/15.png) no-repeat;background-size:contain"></div>
+    <div class="info">
+        <div class="title"><h3>订单评论</h3></div>
+        <div class="msg">付款后订单信息状态发生改变，等待评论</div>
+    </div>
+    <div class="pic" style="background:url(img/16.png) no-repeat;background-size:contain"></div>
+    <div class="info">
+        <div class="title"><h3>完成评论</h3></div>
+        <div class="msg">评论的内容将存在商品信息里</div>
+    </div>
+    <div class="pic" style="background:url(img/17.png) no-repeat;background-size:contain"></div>
+    <div class="info">
+        <div class="title"><h3>商品详情里面能看到用户评论的信息</h3></div>
+        <div class="msg">商品的评论信息里就会显示用户名、评论时间以及评论内容</div>
+    </div>
+    <div class="pic" style="background:url(img/18.png) no-repeat;background-size:contain"></div>
+    <div class="info">
+        <div class="title"><h3>后台管理</h3></div>
+        <div class="msg">后台管理界面</div>
+    </div>
+    <div class="pic" style="background:url(img/19.png) no-repeat;background-size:contain"></div>
+
+</body>
+</html>
