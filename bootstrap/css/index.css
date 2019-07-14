@@ -1,0 +1,187 @@
+.navbar-brand{
+    padding: 7px 15px;
+}
+
+.navbar-inverse{
+    background-color: #ff722b;
+    border-color: #ff722b;
+}
+
+.navbar-inverse .navbar-nav>li>a{
+    color: white;
+}
+
+.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.active>a:hover,.navbar-inverse .navbar-nav>.active>a:focus {
+    color: #fff;
+    background-color: #c75922
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: #fff;
+}
+
+.navbar-inverse .navbar-toggle:hover,.navbar-inverse .navbar-toggle:focus {
+    background-color: #c75922;
+}
+
+.navbar-inverse .navbar-collapse,.navbar-inverse .navbar-form {
+    border-color: #fff;
+}
+
+.navbar{
+    margin-bottom: 0;
+}
+
+.jumbotron{
+    background: url('../images/banner_bg.jpg') center center no-repeat;
+    padding: 25px 0;
+}
+
+.banner_title_pic{
+    margin-top: 47px;
+}
+
+@media(max-width:992px){
+    .banner_title_pic{
+        margin-top: 15px;
+    }
+}
+
+@media(max-width:1200px){
+    .banner_title_pic{
+        margin-top: 30px;
+    }
+}
+
+.banner_title{
+    font-size: 18px;
+    color: #ff0;
+}
+
+.jumbotron .banner_title_info{
+    font-size: 14px;
+    color: #fff;
+    line-height: 28px;
+}
+
+.festival{
+    margin: 0;
+}
+
+.festival h3{
+    margin-top: 0;
+    font-size: 30px;
+    color: #333;
+}
+
+.festival p{
+    font-size: 14px;
+    color: #333;
+}
+
+.festival-pic-list .thumbnail h4{
+    text-align: center;
+    font-size: 15px;
+    color: #333;
+}
+
+.festival-pic-list .thumbnail{
+    max-width: 260px;
+    margin: 0 auto 20px;
+}
+
+.common_title{
+	background-color:#ff722b;
+	margin:0;
+	height:40px;
+}
+
+.common_title h3{
+	font-size:16px;
+	color:#fff;
+	line-height:40px;
+	margin:0;
+	text-indent:10px;
+}
+
+.common_title a{
+	font-size:12px;
+	color:#fff;
+	margin:20px 10px 0 0;
+}
+
+.goods_con img{
+    width: 100%;
+}
+
+.goods_con{
+    border: 1px solid #ddd;
+    margin: 0 auto 20px;
+    max-width: 260px;
+}
+
+.goods-list h4{
+	text-align:center;
+	font-size:14px;
+	color:#666;
+}
+
+.goods-list p{
+	text-align:center;
+	color:#ff0000;
+	font-size:16px;
+}
+
+.goods-list p em{
+	font-size:22px;
+	font-style:normal;
+}
+
+.goods-list .col-lg-2{
+    width: 20%;
+}
+
+@media(max-width:1200px){
+    .goods-list .col-lg-2{
+        width: 20%;
+        float: left;
+    }
+}
+
+@media(max-width:992px){
+    .goods-list .col-lg-2{
+        width: 33.33%;
+    }
+}
+
+@media(max-width:768px){
+    .goods-list .col-lg-2{
+        width: 100%;
+    }
+}
+
+
+.footer{
+	background-color:#ff722b;
+	padding-bottom:20px;
+}
+
+.footer .links{
+	text-align:center;
+	margin-top:35px;
+}
+
+.footer .links a{
+	color:#fff;
+}
+
+.footer .links span{
+	color:#fff;
+	padding:0 10px;
+}
+
+.footer p{
+	text-align:center;
+	margin:10px 0;
+	color:#fff;
+}
