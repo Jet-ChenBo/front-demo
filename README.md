@@ -1,4 +1,4 @@
-- [Jquery整屏滚动](https://jet-chenbo.github.io/JQuery/Custom_ScrollBar/index.html)
+- [Jquery整屏滚动](https://jet-chenbo.github.io/JQuery/Full_Screen_Scrolling/index.html)
 - [轮播图](https://jet-chenbo.github.io/JQuery/slide/index.html)
 - [自定义滚动条](https://jet-chenbo.github.io/JQuery/Custom_ScrollBar/index.html)
 - [bootstrap页面](https://jet-chenbo.github.io/JQuery/bootstrap/index.html)用导航条以及栅栏系统做的页面，可以自适应
