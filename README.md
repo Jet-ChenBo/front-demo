@@ -1,4 +1,4 @@
-- [jQuery整屏滚动](https://jet-chenbo.github.io/JQuery/Full_Screen_Scrolling/index.html)
-- [轮播图](https://jet-chenbo.github.io/JQuery/slide/index.html)
-- [自定义滚动条](https://jet-chenbo.github.io/JQuery/Custom_ScrollBar/index.html)jQuery UI的mousewheel
-- [bootstrap页面](https://jet-chenbo.github.io/JQuery/bootstrap/index.html)用导航条以及栅栏系统做的页面，可以自适应窗口大小
+- [jQuery整屏滚动](https://jet-chenbo.github.io/front-demo/Full_Screen_Scrolling/index.html)
+- [轮播图](https://jet-chenbo.github.io/front-demo/slide/index.html)
+- [自定义滚动条](https://jet-chenbo.github.io/front-demo/Custom_ScrollBar/index.html)jQuery UI的mousewheel
+- [bootstrap页面](https://jet-chenbo.github.io/front-demo/bootstrap/index.html)用导航条以及栅栏系统做的页面，可以自适应窗口大小
