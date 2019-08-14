@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+    <title>Vue</title>
+</head>
+<body>
+    <div id="app">{{ msg }}</div>  <!--显示 Hello world-->
+</body>
+<script>
+    var app = new Vue({
+        el: "#app", // 将Vue实例挂载到DOM元素上
+        data: {    // 声明需要双向绑定的数据
+            msg: 'Hello world'
+        },
+        created:function(){
+            alert("我是Vue实例，创建完成，还未挂载到DOM")
+        },
+        mounted:function(){
+            alert("我是Vue实例，已经挂载到DOM")
+        }
+    });
+    console.log(app.$el)  // 访问绑定的DOM元素 <div id="app">Hello world</div>
+    console.log(app.$data) // 访问data里面的内容
+    console.log(app.msg)  // 访问data里面的某一个属性
+</script>
+</html>
