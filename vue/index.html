@@ -7,51 +7,34 @@
 </head>
 <body>
     <div id="app">
-        {{ dt|formatDate }}
-        <span v-text="cb"></span>
-        <button @click="count">{{ con }}</button>
+        {{myName}}
+        <button v-on:click='cb'>oo</button>
     </div> 
 </body>
 <script>
-    var plusDate = function(value){
-        return value<10 ? '0'+value : value
-    }
-
     var app = new Vue({
         el: "#app", 
+
         data: {   
-            dt: new Date(),
-            cb: '陈波',
-            con:0
-        },
-        mounted: function(){
-            var v = this
-            this.timer = setInterval(function(){               
-                v.dt = Date()
-            }, 1000)
-        },
-        beforeDestory: function(){
-            if(this.timer){
-                clearInterval(this.timer)
-            }
+           name:'chen bo'
         },
         methods:{
-            count:function(){
-                this.con += 1
+            cb:function(){
+                alert(this.myName)
             }
         },
-        filters:{
-            formatDate:function(value){
-                var date = new Date(value)
-                var year = date.getFullYear()
-                var month = plusDate(date.getMonth()+1)
-                var day = plusDate(date.getDate())
-                var hours = plusDate(date.getHours())   
-                var min = plusDate(date.getMinutes())   
-                var sec = plusDate(date.getSeconds())
-                return year+'--'+month+'--'+day+'  '+hours+'--'+min+'--'+sec
+        computed:{
+            myName:{
+                get:function(){
+                    return this.name
+                },
+                set:function(value){
+                    
+                    this.name = value
+                    return 
+                }
             }
-        }      
+        }
     });
 </script>
 </html>
