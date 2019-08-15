@@ -6,23 +6,52 @@
     <title>Vue</title>
 </head>
 <body>
-    <div id="app">{{ msg }}</div>  <!--显示 Hello world-->
+    <div id="app">
+        {{ dt|formatDate }}
+        <span v-text="cb"></span>
+        <button @click="count">{{ con }}</button>
+    </div> 
 </body>
 <script>
+    var plusDate = function(value){
+        return value<10 ? '0'+value : value
+    }
+
     var app = new Vue({
-        el: "#app", // 将Vue实例挂载到DOM元素上
-        data: {    // 声明需要双向绑定的数据
-            msg: 'Hello world'
+        el: "#app", 
+        data: {   
+            dt: new Date(),
+            cb: '陈波',
+            con:0
         },
-        created:function(){
-            alert("我是Vue实例，创建完成，还未挂载到DOM")
+        mounted: function(){
+            var v = this
+            this.timer = setInterval(function(){               
+                v.dt = Date()
+            }, 1000)
         },
-        mounted:function(){
-            alert("我是Vue实例，已经挂载到DOM")
-        }
+        beforeDestory: function(){
+            if(this.timer){
+                clearInterval(this.timer)
+            }
+        },
+        methods:{
+            count:function(){
+                this.con += 1
+            }
+        },
+        filters:{
+            formatDate:function(value){
+                var date = new Date(value)
+                var year = date.getFullYear()
+                var month = plusDate(date.getMonth()+1)
+                var day = plusDate(date.getDate())
+                var hours = plusDate(date.getHours())   
+                var min = plusDate(date.getMinutes())   
+                var sec = plusDate(date.getSeconds())
+                return year+'--'+month+'--'+day+'  '+hours+'--'+min+'--'+sec
+            }
+        }      
     });
-    console.log(app.$el)  // 访问绑定的DOM元素 <div id="app">Hello world</div>
-    console.log(app.$data) // 访问data里面的内容
-    console.log(app.msg)  // 访问data里面的某一个属性
 </script>
 </html>
