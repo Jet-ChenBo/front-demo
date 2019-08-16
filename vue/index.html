@@ -10,38 +10,28 @@
 </head>
 <body>
     <div id="app">
-        <ul>
-            <li v-for="i in list">{{ i.name }}</li>
-        </ul>
-        <ul>
-            <li v-for="(i,index) in list">{{ index }}-{{ i.name }}</li>
-        </ul>
-        <ul>
-            <li v-for="i in fruit">{{ i }}</li>
-        </ul>
-        <ul>
-            <li v-for="(value,key,index) in fruit">{{ index }}-{{key}}-{{value}}</li>
-        </ul>
+        <input type="radio" v-model="picked" :value="msg">{{picked}}<hr>
+        <input type="checkbox" v-model="toggle" :true-value="value1" :false-value="value2">
+        <hr>
+        下拉框<br>
+        <select v-model='valueselect'>
+            <option :value="{age:18}">xixi</option>
+        </select>
+        {{valueselect.age}}
     </div> 
+    
 </body>
 <script>
     var app = new Vue({
         el: '#app',
         data: {
-            list:[
-                {name:'陈波'},
-                {name:'文莉'},
-                {name:'张杰'}
-            ],
-            fruit:{
-                f1:'apple',
-                f2:'pear',
-                f3:'banana'
-            }
-        },     
-        methods:{
-            
-        } 
+            picked:'',
+            msg:'12131',
+            toggle: '',
+            value1: 'cb',
+            value2: 'wl',
+            valueselect:''
+        },    
     })
 </script>
 </html>
