@@ -10,15 +10,34 @@
 </head>
 <body>
     <div id="app">
-        <p v-show="flag">我被渲染</p>
+        <ul>
+            <li v-for="i in list">{{ i.name }}</li>
+        </ul>
+        <ul>
+            <li v-for="(i,index) in list">{{ index }}-{{ i.name }}</li>
+        </ul>
+        <ul>
+            <li v-for="i in fruit">{{ i }}</li>
+        </ul>
+        <ul>
+            <li v-for="(value,key,index) in fruit">{{ index }}-{{key}}-{{value}}</li>
+        </ul>
     </div> 
 </body>
 <script>
     var app = new Vue({
         el: '#app',
         data: {
-            type:'name',
-            flag:true
+            list:[
+                {name:'陈波'},
+                {name:'文莉'},
+                {name:'张杰'}
+            ],
+            fruit:{
+                f1:'apple',
+                f2:'pear',
+                f3:'banana'
+            }
         },     
         methods:{
             
