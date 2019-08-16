@@ -4,37 +4,25 @@
     <meta charset="UTF-8">
     <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
     <title>Vue</title>
+    <style>
+
+    </style>
 </head>
 <body>
     <div id="app">
-        {{myName}}
-        <button v-on:click='cb'>oo</button>
+        <p v-show="flag">我被渲染</p>
     </div> 
 </body>
 <script>
     var app = new Vue({
-        el: "#app", 
-
-        data: {   
-           name:'chen bo'
-        },
+        el: '#app',
+        data: {
+            type:'name',
+            flag:true
+        },     
         methods:{
-            cb:function(){
-                alert(this.myName)
-            }
-        },
-        computed:{
-            myName:{
-                get:function(){
-                    return this.name
-                },
-                set:function(value){
-                    
-                    this.name = value
-                    return 
-                }
-            }
-        }
-    });
+            
+        } 
+    })
 </script>
 </html>
