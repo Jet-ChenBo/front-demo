@@ -9,11 +9,41 @@
     </style>
 </head>
 <body>
-    <div id="app">       
-            
+    <div id="app">
+        余额：{{total}}       
+        <son-component @change="handleTotal"></son-component>
     </div> 
 </body>
 <script>
-    
+    Vue.component('son-component',{
+        template:'<div><button @click="handleincrease">+100</button><button @click="handlereduce">-100</button></div>',
+        methods:{
+            handleincrease:function(){
+                this.count += 1000,
+                this.$emit('change', this.count)
+            },
+            handlereduce:function(){
+                this.count -= 1000,
+                this.$emit('change', this.count)
+            }
+        },
+        data:function(){
+            return {
+                count:2000
+            }
+        }
+    })
+
+    var app = new Vue({
+        el:'#app',
+        data:{
+            total:2000
+        },
+        methods:{
+            handleTotal:function(value){
+                this.total = value
+            }
+        }
+    })
 </script>
 </html>
