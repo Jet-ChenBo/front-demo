@@ -9,23 +9,11 @@
     </style>
 </head>
 <body>
-    <div id="app">        
-        <app-components msg='这是来自父组件的消息'></app-components>       
+    <div id="app">       
+            
     </div> 
 </body>
 <script>
-Vue.component('my-component',{
-    template:'<div>我是一个全局组件</div>'
-})
-
-    var app = new Vue({
-        el: '#app',
-        components:{
-             'app-components':{
-                 props:['msg'],
-                 template:'<div>{{msg}}</div>'
-             }
-        },
-    })
+    
 </script>
 </html>
