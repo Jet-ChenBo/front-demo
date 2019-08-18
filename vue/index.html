@@ -10,13 +10,25 @@
 </head>
 <body>
     <div id="app">
-       
+       <son-component>
+            <div slot='abc'>
+                <p>hahaha</p>
+            </div>
+       </son-component>
     </div> 
+    
 </body>
 <script>
     Vue.component('son-component',{
-        
-        
+        template:'<div>\
+                        <slot name="abc"> \
+                            这是默认内容\
+                        </slot>\
+                  </div>',
+        mounted:function(){
+           var text = this.$slots.abc
+           console.log(text)
+       }
     })
 
     var app = new Vue({
@@ -24,7 +36,7 @@
         data:{
             
         },
-       
+      
     })
 </script>
-</html>
+</html> 
