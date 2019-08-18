@@ -10,21 +10,29 @@
 </head>
 <body>
     <div id="app">
-        
+        <my-con>
+            <template scope="prop">
+                {{prop.text}}
+            </template>
+        </my-con> 
     </div> 
     
 </body>
 <script>
     Vue.component('my-con',{
-       
+        render:function(createElement){
+            return createElement('div',this.$scopedSlots.default({
+                text: '我是子组件传递过来的数据',
+                msg: 'scopetext'
+            }))
+        }
     })
 
     var app = new Vue({
         el:'#app',
         data:{    
-               
-        },
-       
+            name:'Jet' 
+        }
     })
     
     
