@@ -1,6 +1,6 @@
-# vueapp
+# app
 
-> cb
+> vue
 
 ## Build Setup
 
